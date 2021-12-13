@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="plantilla/plantilla :: head">
+        <title>Clínica Dental | Inicio</title>
+    </head>
+
+    <body>
+
+        <header th:replace="plantilla/plantilla :: header"/>
+        <div class="container">
+            <form method="post" th:action="@{/login}">
+                <label for="username">username </label>
+                <input type="text" name="username" id="username"/>
+                <label for="password">password </label>
+                <!--                <input type="password" name="password" id="password"/><input type="submit" value="Login"/>-->
+            </form>
+        </div> 
+
+
+        <section> <!-- Carousel -->
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="padding-top: 50px">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img th:src="@{${'/img/2.jpeg'}}" class="d-block w-100" alt="carousel-2" style="min-height: auto; max-height: 412px;">
+                    </div>
+                    <div class="carousel-item">
+                        <img th:src="@{${'/img/3.jpeg'}}" class="d-block w-100" alt="carousel-3" style="min-height: auto; max-height: 412px;">
+                    </div>
+                    <div class="carousel-item">
+                        <img th:src="@{${'/img/4.jpg'}}" class="d-block w-100" alt="carousel-4" style="min-height: auto; max-height: 412px;">
+                    </div>
+                    <div class="carousel-item">
+                        <img th:src="@{${'/img/5.jpg'}}" class="d-block w-100" alt="carousel-5" style="min-height: auto; max-height: 412px;">
+                    </div>
+                    <div class="carousel-item">
+                        <img th:src="@{${'/img/6.jpeg'}}" class="d-block w-100" alt="carousel-6" style="min-height: auto; max-height: 412px;">
+                    </div>
+                    <div class="carousel-item">
+                        <img th:src="@{${'/img/7.jpg'}}" class="d-block w-100" alt="carousel-7" style="min-height: auto; max-height: 412px;"> 
+                    </div>
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section><!-- /Carousel -->
+        <br/>
+
+        <!-- Tarjetas --> 
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100" style="border: none">
+                        <img th:src="@{${'/iconos/implante.png'}}" class="mx-auto d-block" alt="implante-icon" style="min-width: auto; min-height: auto; max-width: 80px; max-height: 80px;">
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align: center">ESPECIALIDADES</h5>
+                            <p class="card-text">Contamos con profesionales expertos en las siguientes especialidades: Ortodoncia Fija y Removible, Prótesis Fija y Removible, Prostodoncia,
+                                Cirugía, Periodoncia, Implantología, Estética y Cosmética Dental, Endodoncia, Operatoria Dental, Exodoncia.<p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100" style="border: none">
+                        <img th:src="@{${'/iconos/herramientas-de-dentista.png'}}" class="mx-auto d-block" alt="implag" style="min-width: auto; min-height: auto; max-width: 80px; max-height: 80px;">
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align: center">EQUIPO DE ALTA TECNOLOGÍA</h5>
+                            <p class="card-text">Estamos a la vanguardia en nuestra profesión,  contamos con el instrumental y aparatos de ultima generación para brindarle una atención integral, personalizada y profesional.</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100" style="border: none">
+                        <img th:src="@{${'/iconos/silla-dentista.png'}}" class="mx-auto d-block" alt="impnte.png" style="min-width: auto; min-height: auto; max-width: 80px; max-height: 80px;">
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align: center">CONSULTAS CONFORTABLES</h5>
+                            <p class="card-text">Personal capacitado para brindarte tratamientos y servicios en cómodas instalaciones con los más altos estándares de calidad.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <br/>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+
+                <div class="col">              
+                    <div class="card h-100" style="border: none">
+                        <img th:src="@{${'/iconos/dentista.png'}}" class="mx-auto d-block" alt="implantologia" style="min-width: auto; min-height: auto; max-width: 80px; max-height: 80px;">
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align: center">ODONTÓLOGOS ESPECIALISTAS</h5>
+                            <p class="card-text">Disponemos de un equipo profesional de dentistas altamente calificados, comprometidos en ofrecerte un servicio de calidad con tecnología de avanzada.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col">              
+                    <div class="card h-100" style="border: none">
+                        <img th:src="@{${'/iconos/chequeo-dental.png'}}" class="mx-auto d-block" alt="impe.png" style="min-width: auto; min-height: auto; max-width: 80px; max-height: 80px;">
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align: center">SEGUIMIENTO</h5>
+                            <p class="card-text">Desde el primer diente de leche es fundamental un seguimiento en los niños para poder prevenir caries y crear buenos hábitos desde temprana edad.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col">              
+                    <div class="card h-100" style="border: none">
+                        <img th:src="@{${'/iconos/cita.png'}}" class="mx-auto d-block" alt="implang" style="min-width: auto; min-height: auto; max-width: 80px; max-height: 80px;">
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align: center">CITAS</h5>
+                            <p class="card-text">Dedicale a tu boca un poquito de tiempo al día y realiza tu revision cada 6 meses, veras que la recompensa será una vida llena de sorpresas.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Tarjetas --> 
+
+        <!-- Modal Inicio de sesión-->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Iniciar sesión</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form method="post" th:action="@{/login}">
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Usuario</label>
+                                <input type="text" name="username" class="form-control" id="username" aria-describedby="username">
+                                <div id="username" class="form-text">Ingresa tu usuario</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Contraseña</label>
+                                <input type="password" name="password" class="form-control" id="password">
+                                <div id="username" class="form-text">Ingresa tu contraseña</div>
+                            </div>
+                            <button type="submit" class="btn btn-secondary">Entrar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div><!-- //Modal Inicio de sesión-->
+        <br/>
+
+
+        <!--        CONTACTO-->
+        <div class="container">
+            <div class="card mb-3" style="max-width: auto;">
+                <div class="row g-0">
+
+                    <div class="col-md-4" style="padding-top: 10vw">
+                        <img th:src="@{${'/iconos/timetable.png'}}" class="mx-auto d-block responsive" alt="citas-calendar" style="min-width: auto; min-height: auto; max-width: 250px; max-height: 250px; image: ">
+
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h1 class="card-title" style="text-align: center">CONTACTO</h1>
+
+                            <div class="container">
+                                <form class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="inputEmail4" class="form-label">Nombre</label>
+                                        <input type="text" class="form-control" id="inputEmail4">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="inputPassword4" class="form-label">Apellidos</label>
+                                        <input type="text" class="form-control" id="inputPassword4">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="inputAddress" class="form-label">Dirección</label>
+                                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="inputAddress2" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="inputAddress2" placeholder="ej@mail.com">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="inputCity" class="form-label">Motivo</label>
+                                        <input type="text" class="form-control" id="inputCity">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="inputState" class="form-label">Estado</label>
+                                        <select id="inputState" class="form-select">
+                                            <option selected>Selecciona Estado</option>
+                                            <option selected disabled>ESTADO DE LA REPÚBLICA</option>
+                                            <option value="01">Mexico</option>
+                                            <option value="02">Aguascalientes</option>
+                                            <option value="03">Baja California</option>
+                                            <option value="04">Baja California Sur</option>
+                                            <option value="05">Campeche</option>
+                                            <option value="06">Chiapas</option>
+                                            <option value="07">Chihuahua</option>
+                                            <option value="08">Ciudad de México</option>
+                                            <option value="08">Coahuila</option>
+                                            <option value="09">Colima</option>
+                                            <option value="10">Durango</option>
+                                            <option value="11">Estado de México</option>
+                                            <option value="12">Guanajuato</option>
+                                            <option value="13">Guerrero</option>
+                                            <option value="14">Hidalgo</option>
+                                            <option value="15">Jalisco</option>
+                                            <option value="16">Michoacán</option>
+                                            <option value="17">Morelos</option>
+                                            <option value="18">Nayarit</option>
+                                            <option value="19">Nuevo León</option>
+                                            <option value="20">Oaxaca</option>
+                                            <option value="21">Puebla</option>
+                                            <option value="22">Querétaro</option>
+                                            <option value="23">Quintana Roo</option>
+                                            <option value="24">San Luis Potosí</option>
+                                            <option value="25">Sinaloa</option>
+                                            <option value="26">Sonora</option>
+                                            <option value="27">Tabasco</option>
+                                            <option value="28">Tamaulipas</option>
+                                            <option value="29">Tlaxcala</option>
+                                            <option value="30">Veracruz</option>
+                                            <option value="31">Yucatán</option>
+                                            <option value="32">Zacatecas</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="inputZip" class="form-label">Número de teléfono</label>
+                                        <input type="text" class="form-control" id="inputZip">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                                            <label class="form-check-label" for="gridCheck">
+                                                Acepta términos y condiciones.
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary">Enviar</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--        //CONTACTO-->
+
+
+
+
+
+
+
+
+
+
+        <footer th:replace="plantilla/plantilla :: footer">asdasdasdasdasdasd</footer>
+
+    </body>
+</html>

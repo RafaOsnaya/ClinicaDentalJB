@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+    <head>
+        <title>Clínica Dental | Listar Pacientes</title>
+        <meta charset="UTF-8">
+
+    </head>
+    <body>
+        <section th:fragment="listarPacientes" id="pacientes">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col col-md-12 col-md-3  text-center">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="container">
+                                    <div class="row text-center">
+                                        <div class="col-md-12">
+                                            <div class="card border-primary mb-3" style="max-width: auto; max-height: auto;">
+                                                <div class="card-body text-primary">
+                                                    <h3>Total <i class="bi bi-people-fill"></i><h4 th:text="${totalPacientes}"></h4></h3>
+                                                </div>
+                                            </div>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <div th:if="${pacientes != null and !pacientes.empty}">
+                                    <table class="table table-stryped">
+                                        <thead class="table-dark">
+                                            <tr>
+                                                <th>#</th>
+                                                <th>NOMBRE</th>
+                                                <th>APELLIDO PATERNO</th>
+                                                <th>APELLIDO MATERNO</th>
+                                                <th>EDAD</th>
+                                                <th>TELÉFONO</th>
+                                                <th>EMAIL</th>
+                                                <th>DIRECCIÓN</th>
+                                                <th></th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody >
+                                            <tr th:each="paciente, contador : ${pacientes}">
+                                                <td th:text="${contador.count}"></td>
+                                                <td th:text="${paciente.nombre}">Mostrar Nombre</td>
+                                                <td th:text="${paciente.apellidoPat}">Mostrar Apellido Paterno</td>
+                                                <td th:text="${paciente.apellidoMat}">Mostrar Apellido Materno</td>
+                                                <td th:text="${paciente.edad}">Mostrar edad</td>
+                                                <td th:text="${paciente.telefono}">Mostrar Teléfono</td>
+                                                <td th:text="${paciente.email}">Mostrar Email</td>
+                                                <td th:text="${paciente.direccion}">Mostrar Dirección</td>
+                                                <td> <a th:href="@{/editar/} + ${paciente.idPaciente}"><i class="bi bi-pencil"></i></a></td>
+                                                <td> <a th:href="@{/eliminar(idPaciente=${paciente.idPaciente})}"><i class="bi bi-trash"></i></a> </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="text-center p3">
+                                    <div th:if="${pacientes == null or pacientes.empty}">
+                                        NO EXISTEN PACIENTES REGISTRADOS
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

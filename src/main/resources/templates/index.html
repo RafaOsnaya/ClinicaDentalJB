@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="plantilla/plantilla :: head">
+        <title>Clínica Dental | Lista de Pacientes</title>
+    </head>
+    <body>
+        <header th:replace="plantilla/plantilla :: header"/></header>
+        <hr/>
+        <br/>
+        <h1 class="text-center py-3">LISTADO DE PACIENTES</h1>
+        <section th:replace="plantilla/botonesAgregar :: botonesAgregar"></section>
+        <section th:replace="plantilla/listarPacientes :: listarPacientes"></section>
+<!--        <a th:href="@{/agregar}">Registrar Paciente</a>-->
+        <br/>
+        <footer th:replace="plantilla/plantilla :: footer"/>
+
+        
+    </body>
+</html>
